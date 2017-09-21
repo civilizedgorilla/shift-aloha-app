@@ -1,23 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Image } from 'react-native';
 
 export default class App extends React.Component {
   render() {
+    let img = {
+      uri: 'https://images-na.ssl-images-amazon.com/images/I/41q1QAln%2BQL._AC_UL320_SR248,320_.jpg'
+    }
+
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <Image source={img} style={{width: 300, height: 300}} />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
