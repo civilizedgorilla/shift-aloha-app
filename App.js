@@ -1,15 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Image } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
 
 export default class App extends React.Component {
-  render() {
-    let img = {
-      uri: 'https://images-na.ssl-images-amazon.com/images/I/41q1QAln%2BQL._AC_UL320_SR248,320_.jpg'
-    }
+  handleOnPress = () => {
+    alert('HELLO!')
+  }
 
+  render() {
     return (
-      <Image source={img} style={{width: 300, height: 300}} />
+      <View style={styles.container}>
+        <View>
+          <Button
+            title="Say Hello!"
+            onPress={this.handleOnPress}
+            color='white' />
+          </View>
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#c95456',
+    flex: 1,
+    justifyContent: 'center'
+  },
+  buttonContainer:{
+    margin: 20
+  }
+});
